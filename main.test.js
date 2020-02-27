@@ -23,7 +23,7 @@ const countTrues = function(array) {
 const count = function(array, s) {
   let count = 0;
 
-  for(item of array) {
+  for(const item of array) {
     if(item === s) {
       count++;
     }
@@ -35,7 +35,7 @@ const count = function(array, s) {
 const makeFriendly = function(paragraph) {
   let out = "";
 
-  for(char of paragraph) {
+  for(const char of paragraph) {
     if(char === '.') {
       out += '!';
     } else {
@@ -49,7 +49,7 @@ const makeFriendly = function(paragraph) {
 const cubeAll = function(array) {
   let out = [];
 
-  for(item of array) {
+  for(const item of array) {
     out.push(item ** 3);
   }
 
