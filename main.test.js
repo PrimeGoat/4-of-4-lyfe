@@ -2,11 +2,90 @@
  * YOUR CODE HERE *
  ******************/
 
+const addAll = function(array) {
+  let sum = 0;
 
+  for(const item of array) {
+    sum += item;
+  }
 
+  return sum;
+}
 
+const countSpaces = function(string) {
+  return count(string, ' ');
+}
 
+const countTrues = function(array) {
+  return count(array, true);
+}
 
+const count = function(array, s) {
+  let count = 0;
+
+  for(item of array) {
+    if(item === s) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+const makeFriendly = function(paragraph) {
+  let out = "";
+
+  for(char of paragraph) {
+    if(char === '.') {
+      out += '!';
+    } else {
+      out += char;
+    }
+  }
+
+  return out;
+}
+
+const cubeAll = function(array) {
+  let out = [];
+
+  for(item of array) {
+    out.push(item ** 3);
+  }
+
+  return out;
+}
+
+const addNoises = function(strings) {
+  const dogs = [
+    'Fido',
+    'Rolph',
+    'Maisie',
+  ];
+
+  const cats = [
+    'Garfield',
+    'Heathcliff',
+  ];
+
+  const dinos = [
+    'Barnie',
+    'Sharp Tooth',
+  ];
+
+  let out = [];
+  for(string of strings) {
+    if(dogs.includes(string)) {
+      string += ' says "Woof!"';
+    } else if(cats.includes(string)) {
+      string += ' says "Meow!"';
+    } else if(dinos.includes(string)) {
+      string += ' says "ROWR."';
+    }
+    out.push(string);
+  }
+  return out;
+}
 
 /*********************************
  * OUR CODE BELOW; DO NOT TOUCH! *
